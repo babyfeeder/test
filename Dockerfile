@@ -5,4 +5,3 @@ COPY . ./
 
 FROM nginx:1.22.0-alpine
 COPY --from=build-deps /usr/src/app/public /usr/share/nginx/html
-CMD ["nginx", "-g", "daemon off;"]
